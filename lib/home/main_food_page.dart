@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:khamkham/utils/colors.dart';
+import 'package:khamkham/widgets/big_text.dart';
+import 'package:khamkham/widgets/small_text.dart';
 
 class MainFoodPage extends StatefulWidget {
   const MainFoodPage({super.key});
@@ -23,16 +25,8 @@ class _MainFoodPageState extends State<MainFoodPage> {
                 children: [
                   Column(
                     children: [
-                      Text(
-                        "Nepal",
-                        style: TextStyle(
-                          fontSize: 25,
-                          fontStyle: FontStyle.normal,
-                          fontWeight: FontWeight.bold,
-                          color: AppColors.mainColor,
-                        ),
-                      ),
-                      Text("damak"),
+                      BigText(text: 'Nepal'),
+                      SmallText(text: "Damak"),
                     ],
                   ),
                   Container(

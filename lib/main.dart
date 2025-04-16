@@ -14,11 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'khamkhams',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color.fromARGB(255, 54, 10, 129),
-        ),
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
 
       home: MainFoodPage(),
     );
