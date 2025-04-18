@@ -26,7 +26,18 @@ class _MainFoodPageState extends State<MainFoodPage> {
                   Column(
                     children: [
                       BigText(text: 'Nepal'),
-                      SmallText(text: "Damak"),
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 17.0),
+                            child: SmallText(
+                              text: "Damak",
+                              color: Colors.black54,
+                            ),
+                          ),
+                          Icon(Icons.arrow_drop_down_outlined),
+                        ],
+                      ),
                     ],
                   ),
                   Container(
