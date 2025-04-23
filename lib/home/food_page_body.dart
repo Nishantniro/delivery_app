@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:khamkham/widgets/big_text.dart';
+import 'package:khamkham/utils/colors.dart';
+import 'package:khamkham/widgets/small_text.dart';
 
 class FoodPageBody extends StatefulWidget {
   const FoodPageBody({super.key});
@@ -50,6 +53,31 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
+            ),
+            child: Container(
+              padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  BigText(text: "Chowmein", color: Colors.black54),
+                  SizedBox(height: 5),
+                  Row(
+                    children: [
+                      Wrap(
+                        children: List.generate(5, (index) {
+                          return Icon(
+                            Icons.star,
+                            color: AppColors.mainColor,
+                            size: 17,
+                          );
+                        }),
+                      ),
+                      SizedBox(width: 10),
+                      SmallText(text: "4.5"),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
