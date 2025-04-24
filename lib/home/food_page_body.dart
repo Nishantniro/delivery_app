@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:khamkham/widgets/big_text.dart';
 import 'package:khamkham/utils/colors.dart';
+import 'package:khamkham/widgets/icon_and_text.dart';
 import 'package:khamkham/widgets/small_text.dart';
 
 class FoodPageBody extends StatefulWidget {
@@ -32,7 +33,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       children: [
         Container(
           height: 220,
-          margin: EdgeInsets.only(left: 5, right: 5),
+          margin: EdgeInsets.only(left: 9, right: 9),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(30),
             color:
@@ -49,7 +50,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: 130,
-            margin: EdgeInsets.only(left: 38, right: 38, bottom: 20),
+            margin: EdgeInsets.only(left: 38, right: 38, bottom: 30),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
@@ -74,6 +75,35 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                       ),
                       SizedBox(width: 10),
                       SmallText(text: "4.5"),
+                      SizedBox(width: 10),
+                      SmallText(text: "1287"),
+                      SizedBox(width: 10),
+                      SmallText(text: "comments"),
+                    ],
+                  ),
+                  SizedBox(height: 30),
+                  Row(
+                    children: [
+                      IconAndText(
+                        icon: Icons.circle_sharp,
+                        iconColor: AppColors.iconColor1,
+                        text: 'Normal',
+                        color: Colors.black54,
+                      ),
+                      SizedBox(width: 50),
+                      IconAndText(
+                        icon: Icons.location_on,
+                        iconColor: AppColors.mainColor,
+                        text: '1.7km',
+                        color: Colors.black54,
+                      ),
+                      SizedBox(width: 50),
+                      IconAndText(
+                        icon: Icons.access_time_rounded,
+                        iconColor: AppColors.iconColor2,
+                        text: '1.7km',
+                        color: Colors.black54,
+                      ),
                     ],
                   ),
                 ],
