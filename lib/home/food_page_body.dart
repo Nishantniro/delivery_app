@@ -16,7 +16,6 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.red,
       height: 320,
       child: PageView.builder(
         itemCount: 5,
