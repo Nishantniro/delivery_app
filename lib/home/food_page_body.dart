@@ -13,6 +13,25 @@ class FoodPageBody extends StatefulWidget {
 
 class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pagecontroller = PageController(viewportFraction: 0.85);
+  var _CurrPageValue = 0.0;
+
+  @override
+  void initState() {
+    super.initState();
+
+    pagecontroller.addListener(() {
+      setState(() {
+        _CurrPageValue = pagecontroller.page!;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    pagecontroller.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -49,13 +68,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: 130,
-            margin: EdgeInsets.only(left: 38, right: 38, bottom: 30),
+            width: 400,
+            margin: EdgeInsets.only(left: 25, right: 25, bottom: 25),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
               color: Colors.white,
             ),
             child: Container(
-              padding: EdgeInsets.only(top: 10, left: 15, right: 15),
+              padding: EdgeInsets.only(top: 15, left: 15, right: 15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -72,11 +92,11 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                           );
                         }),
                       ),
-                      SizedBox(width: 10),
+                      SizedBox(width: 5),
                       SmallText(text: "4.5"),
                       SizedBox(width: 10),
                       SmallText(text: "1287"),
-                      SizedBox(width: 10),
+                      SizedBox(width: 5),
                       SmallText(text: "comments"),
                     ],
                   ),
@@ -88,17 +108,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         iconColor: AppColors.iconColor1,
                         text: 'Normal',
                       ),
-                      SizedBox(width: 50),
+                      SizedBox(width: 10),
                       IconAndText(
                         icon: Icons.location_on,
                         iconColor: AppColors.mainColor,
                         text: '1.7km',
                       ),
-                      SizedBox(width: 50),
+                      SizedBox(width: 10),
                       IconAndText(
                         icon: Icons.access_time_rounded,
                         iconColor: AppColors.iconColor2,
-                        text: '1.7km',
+                        text: '20min',
                       ),
                     ],
                   ),
