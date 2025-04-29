@@ -48,15 +48,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   }
 
   Widget _buildPageItem(int index) {
-    Matrix4 matrix4 = new Matrix4.identity();
+    Matrix4 matrix = new Matrix4.identity();
     if (index == _CurrPageValue.floor()) {
       var currScale = 1 - (_CurrPageValue - index) * (1 - _ScaleFactor);
+      matrix = Matrix4.diagonal3Values(1, currScale, 1);
     } else if (index == _CurrPageValue.floor() + 1) {
       var currScale =
           _ScaleFactor + (_CurrPageValue - index + 1) * (1 - _ScaleFactor);
+      matrix = Matrix4.diagonal3Values(1, currScale, 1);
     }
     return Transform(
-      transform: matrix4,
+      transform: matrix,
       child: Stack(
         children: [
           Container(
