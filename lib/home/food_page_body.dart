@@ -15,6 +15,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pagecontroller = PageController(viewportFraction: 0.85);
   var _CurrPageValue = 0.0;
   double _ScaleFactor = 0.8;
+  double _height = 220;
 
   @override
   void initState() {
@@ -51,11 +52,20 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     Matrix4 matrix = new Matrix4.identity();
     if (index == _CurrPageValue.floor()) {
       var currScale = 1 - (_CurrPageValue - index) * (1 - _ScaleFactor);
-      matrix = Matrix4.diagonal3Values(1, currScale, 1);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
     } else if (index == _CurrPageValue.floor() + 1) {
       var currScale =
           _ScaleFactor + (_CurrPageValue - index + 1) * (1 - _ScaleFactor);
-      matrix = Matrix4.diagonal3Values(1, currScale, 1);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
+    } else if (index == _CurrPageValue.floor() - 1) {
+      var currScale = 1 - (_CurrPageValue - index) * (1 - _ScaleFactor);
+      var currTrans = _height * (1 - currScale) / 2;
+      matrix = Matrix4.diagonal3Values(1, currScale, 1)
+        ..setTranslationRaw(0, currTrans, 0);
     }
     return Transform(
       transform: matrix,
