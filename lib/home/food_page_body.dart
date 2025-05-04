@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/big_text.dart';
 import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/widgets/icon_and_text.dart';
@@ -16,7 +17,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pagecontroller = PageController(viewportFraction: 0.85);
   var _CurrPageValue = 0.0;
   double _ScaleFactor = 0.8;
-  double _height = 220;
+  double _height = Dimensions.pageViewContainer;
 
   @override
   void initState() {
@@ -93,7 +94,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       child: Stack(
         children: [
           Container(
-            height: 220,
+            height: Dimensions.pageViewContainer,
             margin: EdgeInsets.only(left: 9, right: 9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
@@ -110,7 +111,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: 130,
+              height: Dimensions.pageViewTextContainer,
               width: 400,
               margin: EdgeInsets.only(left: 25, right: 25, bottom: 25),
               decoration: BoxDecoration(
@@ -154,6 +155,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     ),
                     SizedBox(height: 30),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         IconAndText(
                           icon: Icons.circle_sharp,
