@@ -41,7 +41,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Column(
       children: [
         Container(
-          height: 320,
+          height: Dimensions.pageView,
           child: PageView.builder(
             itemCount: 5,
             controller: pagecontroller,
