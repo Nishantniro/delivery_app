@@ -14,7 +14,7 @@ class MainFoodPage extends StatefulWidget {
 class _MainFoodPageState extends State<MainFoodPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return new Scaffold(
       body: Column(
         children: [
           Container(
