@@ -128,12 +128,16 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 ],
               ),
               child: Container(
-                padding: EdgeInsets.only(top: 15, left: 15, right: 15),
+                padding: EdgeInsets.only(
+                  top: Dimensions.height15,
+                  left: 15,
+                  right: 15,
+                ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     BigText(text: "Chowmein", color: Colors.black54),
-                    SizedBox(height: 5),
+                    SizedBox(height: Dimensions.height5),
                     Row(
                       children: [
                         Wrap(
@@ -153,7 +157,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         SmallText(text: "comments"),
                       ],
                     ),
-                    SizedBox(height: 30),
+                    SizedBox(height: Dimensions.height30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
