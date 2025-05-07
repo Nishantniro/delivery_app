@@ -17,7 +17,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   PageController pagecontroller = PageController(viewportFraction: 0.85);
   var _CurrPageValue = 0.0;
   double _ScaleFactor = 0.8;
-  double _height = Dimensions.pageViewContainer;
+  double _height = 220;
 
   @override
   void initState() {
@@ -41,7 +41,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     return Column(
       children: [
         Container(
-          height: Dimensions.pageView,
+          height: 320,
           child: PageView.builder(
             itemCount: 5,
             controller: pagecontroller,
@@ -94,7 +94,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
       child: Stack(
         children: [
           Container(
-            height: Dimensions.pageViewContainer,
+            height: 220,
             margin: EdgeInsets.only(left: 9, right: 9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
@@ -111,8 +111,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: Dimensions.pageViewTextContainer,
-              width: 400,
+              height: 120,
               margin: EdgeInsets.only(left: 25, right: 25, bottom: 25),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
@@ -128,16 +127,12 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 ],
               ),
               child: Container(
-                padding: EdgeInsets.only(
-                  top: Dimensions.height15,
-                  left: 15,
-                  right: 15,
-                ),
+                padding: EdgeInsets.only(top: 15, left: 15, right: 15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     BigText(text: "Chowmein", color: Colors.black54),
-                    SizedBox(height: Dimensions.height5),
+                    SizedBox(height: 5),
                     Row(
                       children: [
                         Wrap(
@@ -157,7 +152,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                         SmallText(text: "comments"),
                       ],
                     ),
-                    SizedBox(height: Dimensions.height30),
+                    SizedBox(height: 30),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
