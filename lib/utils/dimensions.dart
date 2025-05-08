@@ -9,6 +9,9 @@ class Dimensions {
   static double pageViewTextContainer =
       screenHeight / 6.6; //tect container height which is in stack widget
   static double height5 = screenHeight / 160; //sizedbox height
-  static double height30 = screenHeight / 26.66; //sizedbox height
+  static double height20 = screenHeight / 40; //sizedbox height
   static double height15 = screenHeight / 53.33; //sizedbox height
+  static double font20 = screenHeight / 40;
+  static double radius20 = screenHeight / 40;
+  static double radius30 = screenHeight / 26.66;
 }
