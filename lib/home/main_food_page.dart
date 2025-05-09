@@ -58,7 +58,11 @@ class _MainFoodPageState extends State<MainFoodPage> {
                         ),
                         color: AppColors.mainColor,
                       ),
-                      child: Icon(Icons.search),
+                      child: Icon(
+                        Icons.search,
+                        color: Colors.white,
+                        size: Dimensions.icon24,
+                      ),
                     ),
                   ],
                 ),
