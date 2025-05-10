@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/small_text.dart';
 
 class IconAndText extends StatelessWidget {
@@ -16,8 +17,8 @@ class IconAndText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(icon, color: iconColor),
-        SizedBox(width: 5),
+        Icon(icon, color: iconColor, size: Dimensions.icon24),
+        SizedBox(width: Dimensions.radius5),
         SmallText(text: text),
       ],
     );
