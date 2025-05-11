@@ -104,22 +104,36 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             itemBuilder: (context, index) {
               return Container(
                 margin: EdgeInsets.only(
-                  left: Dimensions.width30,
-                  right: Dimensions.width30,
-                  bottom: Dimensions.height10,
+                  left: Dimensions.width20,
+                  right: Dimensions.width20,
+                  bottom: Dimensions.height20,
                 ),
                 child: Row(
                   children: [
                     Container(
-                      height: 100,
-                      width: 100,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(Dimensions.radius5),
+                        borderRadius: BorderRadius.circular(
+                          Dimensions.radius20,
+                        ),
                         color: Colors.red,
                         image: DecorationImage(
                           image: AssetImage("assets/images/food0.png"),
                           fit: BoxFit.cover,
                         ),
+                      ),
+                    ),
+
+                    //text container food name
+                    Container(
+                      height: 100,
+                      width: 200,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(
+                          Dimensions.radius20,
+                        ),
+                        color: Colors.white,
                       ),
                     ),
                   ],
