@@ -1,8 +1,8 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/big_text.dart';
-import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/widgets/icon_and_text.dart';
 import 'package:khamkham/widgets/small_text.dart';
 
@@ -91,6 +91,41 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 ),
               ),
             ],
+          ),
+        ),
+
+        //lists of food with list view builder
+        Container(
+          height: 900,
+          child: ListView.builder(
+            shrinkWrap: true,
+            itemCount: 10,
+            physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return Container(
+                margin: EdgeInsets.only(
+                  left: Dimensions.width30,
+                  right: Dimensions.width30,
+                  bottom: Dimensions.height10,
+                ),
+                child: Row(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(Dimensions.radius5),
+                        color: Colors.red,
+                        image: DecorationImage(
+                          image: AssetImage("assets/images/food0.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              );
+            },
           ),
         ),
       ],
