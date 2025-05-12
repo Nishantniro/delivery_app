@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/dimensions.dart';
 
 class SmallText extends StatelessWidget {
   Color? color;
@@ -8,9 +9,9 @@ class SmallText extends StatelessWidget {
 
   SmallText({
     super.key,
-    this.color = const Color(0xFF332d2b),
+    this.color = Colors.black26,
     required this.text,
-    this.size = 12,
+    this.size = 0,
     this.height = 1.2,
   });
 
@@ -25,7 +26,7 @@ class SmallText extends StatelessWidget {
 
         color: color,
         fontWeight: FontWeight.w400,
-        fontSize: size,
+        fontSize: size == 0 ? Dimensions.font12 : size,
       ),
     );
   }

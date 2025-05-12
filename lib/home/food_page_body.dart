@@ -111,8 +111,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 child: Row(
                   children: [
                     Container(
-                      height: 120,
-                      width: 120,
+                      height: 100,
+                      width: 100,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(
                           Dimensions.radius20,
@@ -135,7 +135,45 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                             topRight: Radius.circular(Dimensions.radius20),
                             bottomRight: Radius.circular(Dimensions.radius20),
                           ),
-                          color: const Color.fromARGB(255, 231, 5, 5),
+                          color: Colors.white,
+                        ),
+                        child: Container(
+                          padding: EdgeInsets.only(
+                            left: Dimensions.width10,
+                            right: Dimensions.width10,
+                          ),
+                          child: Column(
+                            children: [
+                              BigText(
+                                text: "best chicken chowmein in damak",
+                                color: AppColors.mainBlackColor,
+                              ),
+                              SmallText(text: "with extra cheese"),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconAndText(
+                                    icon: Icons.circle_sharp,
+                                    iconColor: AppColors.iconColor1,
+                                    text: 'Normal',
+                                  ),
+                                  SizedBox(width: Dimensions.radius5),
+                                  IconAndText(
+                                    icon: Icons.location_on,
+                                    iconColor: AppColors.mainColor,
+                                    text: '1.7km',
+                                  ),
+                                  SizedBox(width: Dimensions.radius5),
+                                  IconAndText(
+                                    icon: Icons.access_time_rounded,
+                                    iconColor: AppColors.iconColor2,
+                                    text: '20min',
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
