@@ -1,5 +1,6 @@
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:khamkham/main.dart';
 import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/big_text.dart';
@@ -104,15 +105,15 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             itemBuilder: (context, index) {
               return Container(
                 margin: EdgeInsets.only(
-                  left: Dimensions.width20,
-                  right: Dimensions.width20,
+                  left: Dimensions.width10,
+                  right: Dimensions.width10,
                   bottom: Dimensions.height20,
                 ),
                 child: Row(
                   children: [
                     Container(
-                      height: 100,
-                      width: 100,
+                      height: 110,
+                      width: 110,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(
                           Dimensions.radius20,
@@ -143,12 +144,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                             right: Dimensions.width10,
                           ),
                           child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               BigText(
                                 text: "best chicken chowmein in damak",
                                 color: AppColors.mainBlackColor,
                               ),
+                              SizedBox(height: Dimensions.height5),
                               SmallText(text: "with extra cheese"),
+                              SizedBox(height: Dimensions.height10),
+
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
