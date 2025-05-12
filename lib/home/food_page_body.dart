@@ -111,8 +111,8 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                 child: Row(
                   children: [
                     Container(
-                      height: 110,
-                      width: 110,
+                      height: 120,
+                      width: 120,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(
                           Dimensions.radius20,
@@ -126,14 +126,17 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     ),
 
                     //text container food name
-                    Container(
-                      height: 100,
-                      width: 200,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          Dimensions.radius20,
+                    Expanded(
+                      child: Container(
+                        height: 100,
+
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(Dimensions.radius20),
+                            bottomRight: Radius.circular(Dimensions.radius20),
+                          ),
+                          color: const Color.fromARGB(255, 231, 5, 5),
                         ),
-                        color: Colors.white,
                       ),
                     ),
                   ],
