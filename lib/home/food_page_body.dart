@@ -70,7 +70,10 @@ class _FoodPageBodyState extends State<FoodPageBody> {
         //popular text
         SizedBox(height: Dimensions.height20),
         Container(
-          margin: EdgeInsets.only(left: Dimensions.radius30),
+          margin: EdgeInsets.only(
+            left: Dimensions.radius30,
+            bottom: Dimensions.height10,
+          ),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
@@ -95,100 +98,93 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           ),
         ),
 
-        //lists of food with list view builder
-        Container(
-          height: 900,
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: 10,
-            physics: NeverScrollableScrollPhysics(),
-            itemBuilder: (context, index) {
-              return Container(
-                margin: EdgeInsets.only(
-                  left: Dimensions.width10,
-                  right: Dimensions.width10,
-                  bottom: Dimensions.height20,
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      height: Dimensions.listViewImgsize,
-                      width: Dimensions.listViewImgsize,
+        ListView.builder(
+          shrinkWrap: true,
+          itemCount: 10,
+          physics: NeverScrollableScrollPhysics(),
+          itemBuilder: (context, index) {
+            return Container(
+              margin: EdgeInsets.only(
+                left: Dimensions.width10,
+                right: Dimensions.width10,
+                bottom: Dimensions.height20,
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    height: Dimensions.listViewImgsize,
+                    width: Dimensions.listViewImgsize,
+
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(Dimensions.radius20),
+                      color: Colors.red,
+                      image: DecorationImage(
+                        image: AssetImage("assets/images/food0.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
+
+                  //text container food name
+                  Expanded(
+                    child: Container(
+                      height: Dimensions.listViewTextContsize,
 
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(
-                          Dimensions.radius20,
+                        borderRadius: BorderRadius.only(
+                          topRight: Radius.circular(Dimensions.radius20),
+                          bottomRight: Radius.circular(Dimensions.radius20),
                         ),
-                        color: Colors.red,
-                        image: DecorationImage(
-                          image: AssetImage("assets/images/food0.png"),
-                          fit: BoxFit.cover,
-                        ),
+                        color: Colors.white,
                       ),
-                    ),
-
-                    //text container food name
-                    Expanded(
                       child: Container(
-                        height: Dimensions.listViewTextContsize,
-
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(Dimensions.radius20),
-                            bottomRight: Radius.circular(Dimensions.radius20),
-                          ),
-                          color: Colors.white,
+                        padding: EdgeInsets.only(
+                          left: Dimensions.width10,
+                          right: Dimensions.width10,
                         ),
-                        child: Container(
-                          padding: EdgeInsets.only(
-                            left: Dimensions.width10,
-                            right: Dimensions.width10,
-                          ),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              BigText(
-                                text: "best chicken chowmein in damak",
-                                color: AppColors.mainBlackColor,
-                              ),
-                              SizedBox(height: Dimensions.height5),
-                              SmallText(text: "with extra cheese"),
-                              SizedBox(height: Dimensions.height10),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            BigText(
+                              text: "best chicken chowmein in damak",
+                              color: AppColors.mainBlackColor,
+                            ),
+                            SizedBox(height: Dimensions.height5),
+                            SmallText(text: "with extra cheese"),
+                            SizedBox(height: Dimensions.height10),
 
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  IconAndText(
-                                    icon: Icons.circle_sharp,
-                                    iconColor: AppColors.iconColor1,
-                                    text: 'Normal',
-                                  ),
-                                  SizedBox(width: Dimensions.radius5),
-                                  IconAndText(
-                                    icon: Icons.location_on,
-                                    iconColor: AppColors.mainColor,
-                                    text: '1.7km',
-                                  ),
-                                  SizedBox(width: Dimensions.radius5),
-                                  IconAndText(
-                                    icon: Icons.access_time_rounded,
-                                    iconColor: AppColors.iconColor2,
-                                    text: '20min',
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                IconAndText(
+                                  icon: Icons.circle_sharp,
+                                  iconColor: AppColors.iconColor1,
+                                  text: 'Normal',
+                                ),
+                                SizedBox(width: Dimensions.radius5),
+                                IconAndText(
+                                  icon: Icons.location_on,
+                                  iconColor: AppColors.mainColor,
+                                  text: '1.7km',
+                                ),
+                                SizedBox(width: Dimensions.radius5),
+                                IconAndText(
+                                  icon: Icons.access_time_rounded,
+                                  iconColor: AppColors.iconColor2,
+                                  text: '20min',
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
                     ),
-                  ],
-                ),
-              );
-            },
-          ),
+                  ),
+                ],
+              ),
+            );
+          },
         ),
       ],
     );
