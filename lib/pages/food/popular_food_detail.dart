@@ -16,6 +16,7 @@ class PopularFoodDetail extends StatelessWidget {
               height: 350,
               decoration: BoxDecoration(
                 image: DecorationImage(
+                  fit: BoxFit.cover,
                   image: AssetImage("assets/images/food0.png"),
                 ),
               ),
