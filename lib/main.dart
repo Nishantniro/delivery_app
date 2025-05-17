@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:khamkham/home/main_food_page.dart';
+import 'package:khamkham/pages/food/popular_food_detail.dart';
+import 'package:khamkham/pages/home/main_food_page.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'khamkhams',
       theme: ThemeData(primarySwatch: Colors.blue),
 
-      home: MainFoodPage(),
+      home: PopularFoodDetail(),
     );
   }
 }

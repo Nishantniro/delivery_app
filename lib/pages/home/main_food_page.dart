@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:khamkham/home/food_page_body.dart';
+import 'package:khamkham/pages/home/food_page_body.dart';
 import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/big_text.dart';
