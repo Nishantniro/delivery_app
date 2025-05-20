@@ -16,7 +16,9 @@ class Dimensions {
   static double font20 = screenHeight / 40;
   static double font12 = screenHeight / 66.67;
   static double height45 = screenHeight / 17.77;
+
   static double icon24 = screenHeight / 33.33333333;
+  static double icon16 = screenHeight / 50;
 
   static double width5 = screenHeight / 160; //sizedbox height
   static double width20 = screenHeight / 40; //sizedbox height

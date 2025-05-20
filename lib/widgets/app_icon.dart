@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/dimensions.dart';
 
 class AppIcon extends StatelessWidget {
   final IconData icon;
@@ -23,7 +24,7 @@ class AppIcon extends StatelessWidget {
         color: backgroundColor,
       ),
       alignment: Alignment.center,
-      child: Icon(icon, color: iconColor, size: 16),
+      child: Icon(icon, color: iconColor, size: Dimensions.icon16),
     );
   }
 }

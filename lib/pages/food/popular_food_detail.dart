@@ -38,6 +38,22 @@ class PopularFoodDetail extends StatelessWidget {
               ],
             ),
           ),
+
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+            top: Dimensions.popularFoodImgSize - 15,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(Dimensions.radius20),
+                  topRight: Radius.circular(Dimensions.radius15),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );
