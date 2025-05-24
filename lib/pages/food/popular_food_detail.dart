@@ -91,6 +91,57 @@ class PopularFoodDetail extends StatelessWidget {
             topRight: Radius.circular(Dimensions.width20 * 2),
           ),
         ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+              height: 60,
+              width: 120,
+              padding: EdgeInsets.only(
+                top: Dimensions.height5,
+                bottom: Dimensions.height5,
+                left: Dimensions.width20,
+                right: Dimensions.width20,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
+                color: Colors.white,
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.add, color: AppColors.signColor),
+                  SizedBox(width: Dimensions.width10),
+                  BigText(text: "0"),
+                  SizedBox(width: Dimensions.width10),
+                  Icon(Icons.remove, color: AppColors.signColor),
+                ],
+              ),
+            ),
+            Container(
+              height: 60,
+              width: 120,
+              padding: EdgeInsets.only(
+                top: Dimensions.height5,
+                bottom: Dimensions.height5,
+                left: Dimensions.width20,
+                right: Dimensions.width20,
+              ),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(Dimensions.radius20),
+                color: Colors.white,
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.add, color: AppColors.signColor),
+                  SizedBox(width: Dimensions.width10),
+                  BigText(text: "0"),
+                  SizedBox(width: Dimensions.width10),
+                  Icon(Icons.remove, color: AppColors.signColor),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
