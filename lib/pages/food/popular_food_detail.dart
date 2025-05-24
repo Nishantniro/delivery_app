@@ -96,12 +96,12 @@ class PopularFoodDetail extends StatelessWidget {
           children: [
             Container(
               height: 60,
-              width: 120,
+
               padding: EdgeInsets.only(
                 top: Dimensions.height5,
                 bottom: Dimensions.height5,
-                left: Dimensions.width20,
-                right: Dimensions.width20,
+                left: Dimensions.width10,
+                right: Dimensions.width10,
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
@@ -117,28 +117,21 @@ class PopularFoodDetail extends StatelessWidget {
                 ],
               ),
             ),
+
             Container(
               height: 60,
-              width: 120,
+
               padding: EdgeInsets.only(
-                top: Dimensions.height5,
-                bottom: Dimensions.height5,
-                left: Dimensions.width20,
-                right: Dimensions.width20,
+                top: Dimensions.height15,
+                bottom: Dimensions.height15,
+                left: Dimensions.width10,
+                right: Dimensions.width10,
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius20),
-                color: Colors.white,
+                color: AppColors.mainColor,
               ),
-              child: Row(
-                children: [
-                  Icon(Icons.add, color: AppColors.signColor),
-                  SizedBox(width: Dimensions.width10),
-                  BigText(text: "0"),
-                  SizedBox(width: Dimensions.width10),
-                  Icon(Icons.remove, color: AppColors.signColor),
-                ],
-              ),
+              child: BigText(text: "रु 15 | Add to cart", color: Colors.white),
             ),
           ],
         ),
