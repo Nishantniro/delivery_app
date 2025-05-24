@@ -13,6 +13,7 @@ class PopularFoodDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Positioned(
@@ -63,10 +64,33 @@ class PopularFoodDetail extends StatelessWidget {
                   topRight: Radius.circular(Dimensions.radius20),
                 ),
               ),
-              child: AppColumn(text: "Chicken Chowmein"),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  AppColumn(text: "Chicken Chowmein"),
+                  SizedBox(height: Dimensions.height20),
+                  BigText(text: "Introduce"),
+                ],
+              ),
             ),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        height: 120,
+        padding: EdgeInsets.only(
+          top: Dimensions.radius30,
+          bottom: Dimensions.radius30,
+          left: Dimensions.width20,
+          right: Dimensions.width20,
+        ),
+        decoration: BoxDecoration(
+          color: AppColors.buttonBackgroundColor,
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimensions.width20 * 2),
+            topRight: Radius.circular(Dimensions.width20 * 2),
+          ),
+        ),
       ),
     );
   }
