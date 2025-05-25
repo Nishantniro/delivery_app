@@ -34,10 +34,11 @@ class PopularFoodDetail extends StatelessWidget {
           Positioned(
             left: Dimensions.height20,
             right: Dimensions.height20,
-            top: Dimensions.popularFoodImgSize - 340,
+            top: Dimensions.popularFoodImgSize - 320,
 
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
               children: [
                 AppIcon(icon: Icons.arrow_back_ios),
                 AppIcon(icon: Icons.shopping_cart_outlined),
@@ -77,7 +78,7 @@ class PopularFoodDetail extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: Container(
-        height: 120,
+        height: Dimensions.bottomHeightBar,
         padding: EdgeInsets.only(
           top: Dimensions.radius30,
           bottom: Dimensions.radius30,
