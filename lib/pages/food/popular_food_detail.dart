@@ -73,9 +73,13 @@ class PopularFoodDetail extends StatelessWidget {
                   SizedBox(height: Dimensions.height20),
                   BigText(text: "Introduce"),
                   SizedBox(height: Dimensions.height20),
-                  ExpendableTextWidget(
-                    text:
-                        "hello this is chicken chowmein of bhumika restaurant. It is very delicious and tasty. You can enjoy it with your friends and family. It is made with fresh ingredients and cooked to perfection. The noodles are soft and the chicken is tender. You will love the flavors and the aroma of this dish. It is a must-try for all food lovers.",
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: ExpendableTextWidget(
+                        text:
+                            "hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant.hello this is chicken chowmein of bhumika restaurant. It is very delicious and tasty. You can enjoy it with your friends and family. It is made with fresh ingredients and cooked to perfection. The noodles are soft and the chicken is tender. You will love the flavors and the aroma of this dish. It is a must-try for all food lovers.",
+                      ),
+                    ),
                   ),
                 ],
               ),
