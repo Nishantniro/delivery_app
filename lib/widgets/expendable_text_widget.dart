@@ -50,7 +50,11 @@ class _ExpendableTextWidgetState extends State<ExpendableTextWidget> {
                             : (firstHalf + secondHalf),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      setState(() {
+                        hiddenText = !hiddenText;
+                      });
+                    },
                     child: Row(
                       children: [
                         SmallText(
