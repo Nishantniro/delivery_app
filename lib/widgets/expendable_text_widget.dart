@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:khamkham/utils/colors.dart';
 import 'package:khamkham/utils/dimensions.dart';
+import 'package:khamkham/widgets/small_text.dart';
 
 class ExpendableTextWidget extends StatefulWidget {
   final String text;
@@ -35,6 +37,32 @@ class _ExpendableTextWidgetState extends State<ExpendableTextWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child:
+          secondHalf.isEmpty
+              ? SmallText(text: firstHalf)
+              : Column(
+                children: [
+                  SmallText(
+                    text:
+                        hiddenText
+                            ? ("$firstHalf...")
+                            : (firstHalf + secondHalf),
+                  ),
+                  InkWell(
+                    onTap: () {},
+                    child: Row(
+                      children: [
+                        SmallText(
+                          text: "show more",
+                          color: AppColors.mainColor,
+                        ),
+                        Icon(Icons.arrow_drop_down, color: AppColors.mainColor),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+    );
   }
 }

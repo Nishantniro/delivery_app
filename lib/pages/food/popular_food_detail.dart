@@ -4,6 +4,7 @@ import 'package:khamkham/utils/dimensions.dart';
 import 'package:khamkham/widgets/app_column.dart';
 import 'package:khamkham/widgets/app_icon.dart';
 import 'package:khamkham/widgets/big_text.dart';
+import 'package:khamkham/widgets/expendable_text_widget.dart';
 import 'package:khamkham/widgets/icon_and_text.dart';
 import 'package:khamkham/widgets/small_text.dart';
 
@@ -71,6 +72,11 @@ class PopularFoodDetail extends StatelessWidget {
                   AppColumn(text: "Chicken Chowmein"),
                   SizedBox(height: Dimensions.height20),
                   BigText(text: "Introduce"),
+                  SizedBox(height: Dimensions.height20),
+                  ExpendableTextWidget(
+                    text:
+                        "hello this is chicken chowmein of bhumika restaurant. It is very delicious and tasty. You can enjoy it with your friends and family. It is made with fresh ingredients and cooked to perfection. The noodles are soft and the chicken is tender. You will love the flavors and the aroma of this dish. It is a must-try for all food lovers.",
+                  ),
                 ],
               ),
             ),
