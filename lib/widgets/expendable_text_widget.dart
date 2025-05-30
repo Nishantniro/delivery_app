@@ -61,7 +61,12 @@ class _ExpendableTextWidgetState extends State<ExpendableTextWidget> {
                           text: "show more",
                           color: AppColors.mainColor,
                         ),
-                        Icon(Icons.arrow_drop_down, color: AppColors.mainColor),
+                        Icon(
+                          hiddenText
+                              ? Icons.arrow_drop_down
+                              : Icons.arrow_drop_up,
+                          color: AppColors.mainColor,
+                        ),
                       ],
                     ),
                   ),
