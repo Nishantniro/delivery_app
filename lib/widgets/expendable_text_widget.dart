@@ -44,6 +44,7 @@ class _ExpendableTextWidgetState extends State<ExpendableTextWidget> {
               : Column(
                 children: [
                   SmallText(
+                    size: Dimensions.font16,
                     text:
                         hiddenText
                             ? ("$firstHalf...")
