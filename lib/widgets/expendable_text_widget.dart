@@ -44,6 +44,7 @@ class _ExpendableTextWidgetState extends State<ExpendableTextWidget> {
               : Column(
                 children: [
                   SmallText(
+                    color: AppColors.paraColor,
                     size: Dimensions.font16,
                     text:
                         hiddenText
