@@ -80,62 +80,91 @@ class RecommenededFoodDetail extends StatelessWidget {
         ],
       ),
 
-      bottomNavigationBar: Container(
-        height: Dimensions.bottomHeightBar,
-        padding: EdgeInsets.only(
-          top: Dimensions.radius30,
-          bottom: Dimensions.radius30,
-          left: Dimensions.width20,
-          right: Dimensions.width20,
-        ),
-        decoration: BoxDecoration(
-          color: AppColors.buttonBackgroundColor,
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(Dimensions.width20 * 2),
-            topRight: Radius.circular(Dimensions.width20 * 2),
+      bottomNavigationBar: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                AppIcon(
+                  iconSize: Dimensions.icon24,
+                  icon: Icons.remove,
+                  backgroundColor: AppColors.mainColor,
+                  iconColor: Colors.white,
+                ),
+                SizedBox(width: Dimensions.width5),
+
+                AppIcon(
+                  iconSize: Dimensions.icon24,
+                  icon: Icons.add,
+                  backgroundColor: AppColors.mainColor,
+                  iconColor: Colors.white,
+                ),
+              ],
+            ),
           ),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              height: 60,
-              width: 60,
-
-              padding: EdgeInsets.only(
-                top: Dimensions.height5,
-                bottom: Dimensions.height5,
-                left: Dimensions.width10,
-                right: Dimensions.width10,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(Dimensions.radius20),
-                color: Colors.white,
-              ),
-              child: Icon(
-                Icons.favorite,
-                color: AppColors.mainColor,
-                size: Dimensions.icon24,
+          Container(
+            height: Dimensions.bottomHeightBar,
+            padding: EdgeInsets.only(
+              top: Dimensions.radius30,
+              bottom: Dimensions.radius30,
+              left: Dimensions.width20,
+              right: Dimensions.width20,
+            ),
+            decoration: BoxDecoration(
+              color: AppColors.buttonBackgroundColor,
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(Dimensions.width20 * 2),
+                topRight: Radius.circular(Dimensions.width20 * 2),
               ),
             ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  height: 60,
+                  width: 60,
 
-            Container(
-              height: 60,
+                  padding: EdgeInsets.only(
+                    top: Dimensions.height5,
+                    bottom: Dimensions.height5,
+                    left: Dimensions.width10,
+                    right: Dimensions.width10,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
+                    color: Colors.white,
+                  ),
+                  child: Icon(
+                    Icons.favorite,
+                    color: AppColors.mainColor,
+                    size: Dimensions.icon24,
+                  ),
+                ),
 
-              padding: EdgeInsets.only(
-                top: Dimensions.height15,
-                bottom: Dimensions.height15,
-                left: Dimensions.width10,
-                right: Dimensions.width10,
-              ),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(Dimensions.radius20),
-                color: AppColors.mainColor,
-              ),
-              child: BigText(text: "रु 15 | Add to cart", color: Colors.white),
+                Container(
+                  height: 60,
+
+                  padding: EdgeInsets.only(
+                    top: Dimensions.height15,
+                    bottom: Dimensions.height15,
+                    left: Dimensions.width10,
+                    right: Dimensions.width10,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.radius20),
+                    color: AppColors.mainColor,
+                  ),
+                  child: BigText(
+                    text: "रु 15 | Add to cart",
+                    color: Colors.white,
+                  ),
+                ),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
