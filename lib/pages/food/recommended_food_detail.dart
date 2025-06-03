@@ -84,8 +84,14 @@ class RecommenededFoodDetail extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
+            padding: EdgeInsets.only(
+              top: Dimensions.height10,
+              bottom: Dimensions.height10,
+              left: Dimensions.width20 * 3,
+              right: Dimensions.width20 * 3,
+            ),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 AppIcon(
                   iconSize: Dimensions.icon24,
@@ -93,7 +99,11 @@ class RecommenededFoodDetail extends StatelessWidget {
                   backgroundColor: AppColors.mainColor,
                   iconColor: Colors.white,
                 ),
-                SizedBox(width: Dimensions.width5),
+                BigText(
+                  text: "\रु15 " + " X " + " 0 ",
+                  color: AppColors.mainBlackColor,
+                  size: Dimensions.font26,
+                ),
 
                 AppIcon(
                   iconSize: Dimensions.icon24,
