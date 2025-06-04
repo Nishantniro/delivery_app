@@ -53,6 +53,7 @@ class RecommenededFoodDetail extends StatelessWidget {
             backgroundColor: AppColors.yellowColor,
             expandedHeight: 300,
             flexibleSpace: FlexibleSpaceBar(
+              collapseMode: CollapseMode.parallax,
               background: Image.asset(
                 "assets/images/food0.png",
                 width: double.maxFinite,
