@@ -13,3 +13,9 @@
 //   //controllers
 //   Get.lazyPut(() => PopularProductController(popularProductRepo: Get.find()));
 // }
+import 'package:get/get.dart';
+import 'package:khamkham/data/api/api_client.dart';
+
+Future<void> init() async {
+  Get.lazyPut(() => ApiClient(appBaseUrl: "www.example.com"));
+}
